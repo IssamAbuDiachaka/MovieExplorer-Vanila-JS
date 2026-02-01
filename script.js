@@ -55,7 +55,7 @@ function searchMovies() {
     });
 }
 
-
+/**
  * displayMovies(movies) - Renders movie cards on the page
  * - Array of movie objects from API response
  * How it works:
