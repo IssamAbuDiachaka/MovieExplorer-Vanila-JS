@@ -3,44 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Explorer</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Movie Discovery App</title>
 </head>
 <body>
     <header>
-        <h1>Movie Explorer</h1>
-        <button id="theme-toggle" aria-label="Toggle theme">Dark Mode</button>
-    </header>
-
-    <main>
-        <section id="search-section">
+        <div class="header-left">
+            <h1>MovieExplorer</h1>
+        </div>
+        <div class="header-center">
             <div class="search-container">
-                <input 
-                    type="text" 
-                    id="search-input" 
-                    placeholder="Search for movies..."
-                    aria-label="Movie search input"
-                />
-                <span id="char-counter" aria-live="polite">0 characters</span>
+                <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" id="search-input" placeholder="Search movies, series, or actors via OMDb...">
             </div>
-            <div class="button-container">
-                <button id="search-btn">Search</button>
-                <button id="clear-btn" style="display: none;">Clear Results</button>
+        </div>
+        <div class="header-right">
+            <button id="toggle-theme" class="theme-toggle">Change Theme</button>
+        </div>
+    </header>
+    <main>
+        <section id="movie-results-section">
+            <div id="welcome-message">
+                <h2>Discover Your Next Favorite Movie</h2>
+                <p>Search for movies, series, or actors to get started</p>
             </div>
+            <h2 id="available-movies-heading" style="display: none;">Available Movies</h2>
+            <div id="movie-results"></div>
         </section>
-
-        <div id="status-message" role="status" aria-live="polite"></div>
-
-        <section id="results-section">
-            <div id="results-grid" class="movie-grid"></div>
-        </section>
-
-        <section id="watchlist-section">
+        <section id="watchlist">
             <h2>My Watchlist</h2>
-            <div id="watchlist-container"></div>
+            <div id="watchlist-items"></div>
+            <button id="clear-watchlist" onclick="clearWatchlist()">Clear Watchlist</button>
         </section>
     </main>
-
-    <script type="module" src="js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
