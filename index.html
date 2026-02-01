@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Movie Explorer</h1>
+        <button id="theme-toggle" aria-label="Toggle theme">Dark Mode</button>
+    </header>
+
+    <main>
+        <section id="search-section">
+            <div class="search-container">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="Search for movies..."
+                    aria-label="Movie search input"
+                />
+                <span id="char-counter" aria-live="polite">0 characters</span>
+            </div>
+            <div class="button-container">
+                <button id="search-btn">Search</button>
+                <button id="clear-btn" style="display: none;">Clear Results</button>
+            </div>
+        </section>
+
+        <div id="status-message" role="status" aria-live="polite"></div>
+
+        <section id="results-section">
+            <div id="results-grid" class="movie-grid"></div>
+        </section>
+
+        <section id="watchlist-section">
+            <h2>My Watchlist</h2>
+            <div id="watchlist-container"></div>
+        </section>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
