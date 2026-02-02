@@ -4,7 +4,9 @@ body {
   padding: 0;
   background-color: #0a0a0a;
   color: #fff;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
   overflow: hidden;
   height: 100vh;
 }
@@ -17,11 +19,14 @@ header {
   justify-content: space-between;
   box-shadow: none;
   border-bottom: 1px solid #2a2a2a;
-  transition: background 0.3s, border-color 0.3s;
+  transition:
+    background 0.3s,
+    border-color 0.3s;
 }
 
 .header-left h1 {
   margin: 0;
+  padding-left: 40px;
   font-size: 24px;
   color: #fff;
   font-weight: 600;
@@ -61,7 +66,10 @@ header {
   color: #fff;
   font-size: 14px;
   outline: none;
-  transition: background 0.2s, border-color 0.2s, color 0.3s;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.3s;
 }
 
 #search-input::placeholder {
@@ -86,7 +94,10 @@ header {
   cursor: pointer;
   padding: 10px 16px;
   border-radius: 6px;
-  transition: background 0.2s, color 0.3s, border-color 0.3s;
+  transition:
+    background 0.2s,
+    color 0.3s,
+    border-color 0.3s;
 }
 
 #toggle-theme:hover {
@@ -106,7 +117,7 @@ main {
 #movie-results-section {
   flex: 1;
   margin: 0;
-  padding: 30px;
+  padding: 0px 0px 0px 70px;
   background: #0f0f0f;
   border-right: 1px solid #2a2a2a;
   overflow-y: auto;
@@ -119,6 +130,10 @@ main {
   color: #fff;
 }
 
+#available-movies-heading {
+  padding-top: 20px;
+}
+
 #movie-results {
   display: flex;
   flex-wrap: wrap;
@@ -127,7 +142,7 @@ main {
 }
 
 #watchlist {
-  width: 280px;
+  width: 250px;
   padding: 25px;
   background: #1a1a1a;
   display: flex;
@@ -161,7 +176,9 @@ main {
   color: #fff;
   font-size: 14px;
   cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
   margin-top: auto;
 }
 
@@ -197,7 +214,9 @@ main {
   cursor: pointer;
   font-size: 12px;
   color: #fff;
-  transition: background 0.2s, border-color 0.2s;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
 }
 
 #watchlist-items button:hover {
@@ -212,7 +231,10 @@ main {
   margin: 0;
   overflow: hidden;
   padding: 0;
-  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    border-color 0.2s;
   cursor: pointer;
   width: 200px;
   box-shadow: none;
@@ -257,7 +279,9 @@ main {
   color: #fff;
   font-size: 14px;
   cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
 }
 
 .movie-card button:hover {
@@ -459,7 +483,7 @@ body:not(.dark-mode) .movie-card:hover {
   font-weight: 700;
   margin: 0 0 15px 0;
   color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: -1px;
 }
 

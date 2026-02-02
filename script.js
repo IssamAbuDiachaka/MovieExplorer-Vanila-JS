@@ -10,6 +10,10 @@ document.getElementById("search-input").addEventListener("keypress", (e) => {
   }
 });
 
+document
+  .getElementById("clear-watchlist")
+  .addEventListener("click", clearWatchlist);
+
 // Event listener: Switches between light and dark theme when toggle button is clicked
 document.getElementById("toggle-theme").addEventListener("click", toggleTheme);
 
@@ -29,7 +33,7 @@ function searchMovies() {
   const url = `https://www.omdbapi.com/?apikey=${apiKey}&s=${query}`;
   const heading = document.getElementById("available-movies-heading");
   const welcomeMessage = document.getElementById("welcome-message");
-  
+
   // Show loading message while fetching data
   document.getElementById("movie-results").innerHTML = "Searching...";
   heading.style.display = "none";
@@ -50,7 +54,8 @@ function searchMovies() {
     })
     .catch(() => {
       // Handle any network or API errors
-      document.getElementById("movie-results").innerHTML = "Error fetching data.";
+      document.getElementById("movie-results").innerHTML =
+        "Error fetching data.";
       heading.style.display = "none";
     });
 }
@@ -69,7 +74,7 @@ function searchMovies() {
 function displayMovies(movies) {
   const resultsContainer = document.getElementById("movie-results");
   const heading = document.getElementById("available-movies-heading");
-  
+
   // Clear any previous search results to avoid mixing old and new results
   resultsContainer.innerHTML = "";
   // Show the heading now that we have results
@@ -102,29 +107,26 @@ function displayMovies(movies) {
   });
 }
 
-
 function addToWatchlist(movieTitle) {
   watchlist.push(movieTitle); // Add movie title to the array
   renderWatchlist(); // Refresh the watchlist display
 }
 
-
 function renderWatchlist() {
   const watchlistContainer = document.getElementById("watchlist-items");
   // Clear existing watchlist items to avoid duplicates
   watchlistContainer.innerHTML = "";
-  
+
   // Loop through each movie in the watchlist array
   watchlist.forEach((movie) => {
     // Create a new div for each watchlist item
     const item = document.createElement("div");
-    
+
     // Add movie title and a remove button
     item.innerHTML = `<span>${movie}</span><button onclick="removeFromWatchlist('${movie}')">Remove</button>`;
     watchlistContainer.appendChild(item);
   });
 }
-
 
 function removeFromWatchlist(movieTitle) {
   // Find the index of the movie in the watchlist array
@@ -135,7 +137,6 @@ function removeFromWatchlist(movieTitle) {
   }
   renderWatchlist(); // Refresh the display
 }
-
 
 function toggleTheme() {
   document.body.classList.toggle("dark-mode");
