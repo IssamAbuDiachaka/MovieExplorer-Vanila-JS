@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Movie Discovery App</title>
+    <title>Movie Explorer App</title>
 </head>
 <body>
     <header>
@@ -33,6 +33,13 @@
             <h2 id="available-movies-heading" style="display: none;">Available Movies</h2>
             <div id="movie-results"></div>
         </section>
+        <!-- Modal for showing movie details -->
+        <div id="movie-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <button class="close-modal">&times;</button>
+                <div id="modal-body"></div>
+            </div>
+        </div>
         <section id="watchlist">
             <h2>My Watchlist</h2>
             <div id="watchlist-items"></div>
