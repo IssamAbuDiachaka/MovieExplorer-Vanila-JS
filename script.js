@@ -1,8 +1,7 @@
-/** OMDb API Key */
+//OMDb API Key
 const apiKey = "bc11235e";
 
-// STATE MANAGEMENT
-/** Array to store movie titles in the watchlist */
+//Array to store movie titles in the watchlist
 let watchlist = [];
 
 // DOM INITIALIZATION & EVENT LISTENERS
@@ -42,7 +41,6 @@ function initializeEventListeners() {
 }
 
 // SEARCH & DISPLAY FUNCTIONS
-
 // Fetch movies from OMDb API and display results
 function searchMovies() {
   const query = document.getElementById("search-input").value;
@@ -138,7 +136,6 @@ function showMovieDetails(imdbID) {
 }
 
 // WATCHLIST MANAGEMENT
-
 // Add movie to watchlist and refresh display
 function addToWatchlist(movieTitle) {
   watchlist.push(movieTitle);

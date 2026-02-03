@@ -11,6 +11,7 @@ body {
   height: 100vh;
 }
 
+/* HEADER SECTION */
 header {
   background: #ffffff;
   padding: 15px 30px;
@@ -41,6 +42,12 @@ header {
   margin: 0 40px;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+/* SEARCH BAR */
 .search-container {
   position: relative;
   width: 100%;
@@ -76,11 +83,7 @@ header {
   color: #666;
 }
 
-.header-right {
-  display: flex;
-  align-items: center;
-}
-
+/* THEME TOGGLE BUTTON */
 #toggle-theme {
   background: transparent;
   border: 1px solid #ddd;
@@ -100,6 +103,7 @@ header {
   border-color: #3a3a3a;
 }
 
+/* MAIN LAYOUT */
 main {
   display: flex;
   margin: 0;
@@ -109,6 +113,7 @@ main {
   overflow: hidden;
 }
 
+/* MOVIE RESULTS SECTION */
 #movie-results-section {
   flex: 1;
   margin: 0;
@@ -129,10 +134,6 @@ main {
   padding-top: 20px;
 }
 
-#available-movies-heading {
-  padding-top: 20px;
-}
-
 #movie-results {
   display: flex;
   flex-wrap: wrap;
@@ -140,89 +141,33 @@ main {
   gap: 20px;
 }
 
-#watchlist {
-  width: 250px;
-  padding: 25px;
-  background: #f9f9f9;
+/* WELCOME MESSAGE */
+#welcome-message {
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-}
-
-#watchlist h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  font-size: 28px;
-  font-weight: 600;
-  color: #000;
-}
-
-#watchlist-items {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  flex: 1;
-  overflow-y: auto;
-  margin-bottom: 15px;
-}
-
-#clear-watchlist {
-  width: 100%;
-  padding: 12px;
-  background: transparent;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  color: #000;
-  font-size: 14px;
-  cursor: pointer;
-  transition:
-    background 0.2s,
-    border-color 0.2s;
-  margin-top: auto;
-}
-
-#clear-watchlist:hover {
-  background: rgba(0, 0, 0, 0.05);
-  border-color: #999;
-}
-
-#watchlist-items div {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 12px;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
+  justify-content: flex-start;
+  padding-top: 120px;
+  text-align: center;
 }
 
-#watchlist-items span {
-  flex: 1;
-  margin-right: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+#welcome-message h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 15px 0;
   color: #000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: -1px;
 }
 
-#watchlist-items button {
-  padding: 6px 12px;
-  background: transparent;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 12px;
-  color: #000;
-  transition:
-    background 0.2s,
-    border-color 0.2s;
+#welcome-message p {
+  font-size: 18px;
+  color: #666;
+  margin: 0;
+  font-weight: 300;
 }
 
-#watchlist-items button:hover {
-  background: rgba(0, 0, 0, 0.05);
-  border-color: #999;
-}
-
+/* MOVIE CARDS */
 .movie-card {
   background: #ffffff;
   border: 1px solid #e0e0e0;
@@ -294,6 +239,158 @@ main {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* WATCHLIST SECTION */
+#watchlist {
+  width: 250px;
+  padding: 25px;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#watchlist h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #000;
+}
+
+#watchlist-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 15px;
+}
+
+#watchlist-items div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+}
+
+#watchlist-items span {
+  flex: 1;
+  margin-right: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #000;
+}
+
+#watchlist-items button {
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  color: #000;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+#watchlist-items button:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: #999;
+}
+
+#clear-watchlist {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  color: #000;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+  margin-top: auto;
+}
+
+#clear-watchlist:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: #999;
+}
+
+/* MODAL STYLES */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+}
+
+.modal-movie-details h2 {
+  margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.modal-movie-details p {
+  line-height: 1.6;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.modal-add-btn {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.2s;
+}
+
+.modal-add-btn:hover {
+  background: #0056b3;
+}
+
+/* DARK MODE THEME */
 .dark-mode {
   background-color: #0a0a0a;
   color: #fff;
@@ -346,6 +443,46 @@ main {
   color: #fff;
 }
 
+.dark-mode #welcome-message h2 {
+  color: #fff;
+}
+
+.dark-mode #welcome-message p {
+  color: #888;
+}
+
+.dark-mode .movie-card {
+  background-color: #1a1a1a;
+  border-color: #2a2a2a;
+}
+
+.dark-mode .movie-card-info {
+  background: #1a1a1a;
+}
+
+.dark-mode .movie-card h3 {
+  color: #fff;
+}
+
+.dark-mode .movie-card p {
+  color: #999;
+}
+
+.dark-mode .movie-card button {
+  border-color: #2a2a2a;
+  color: #fff;
+}
+
+.dark-mode .movie-card button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #3a3a3a;
+}
+
+.dark-mode .movie-card:hover {
+  border-color: #3a3a3a;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
 .dark-mode #watchlist {
   background: #1a1a1a;
 }
@@ -383,142 +520,11 @@ main {
   border-color: #3a3a3a;
 }
 
-.dark-mode .movie-card {
-  background-color: #1a1a1a;
-  border-color: #2a2a2a;
-}
-
-.dark-mode .movie-card-info {
-  background: #1a1a1a;
-}
-
-.dark-mode .movie-card h3 {
-  color: #fff;
-}
-
-.dark-mode .movie-card p {
-  color: #999;
-}
-
-.dark-mode .movie-card button {
-  border-color: #2a2a2a;
-  color: #fff;
-}
-
-.dark-mode .movie-card button:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: #3a3a3a;
-}
-
-.dark-mode .movie-card:hover {
-  border-color: #3a3a3a;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
-
-#welcome-message {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 120px;
-  text-align: center;
-}
-
-#welcome-message h2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin: 0 0 15px 0;
-  color: #000;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  letter-spacing: -1px;
-}
-
-#welcome-message p {
-  font-size: 18px;
-  color: #666;
-  margin: 0;
-  font-weight: 300;
-}
-
-.dark-mode #welcome-message h2 {
-  color: #fff;
-}
-
-.dark-mode #welcome-message p {
-  color: #888;
-}
-/* Modal Styles */
-.modal {
-  position: fixed;
-  z-index: 1000;
-  /* left: 0;
-  top: 0; */
-  /* width: 100%;
-  height: 100%; */
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.modal-content {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 600px;
-  max-height: 80vh;
-  overflow-y: auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  position: relative;
-}
-
 .dark-mode .modal-content {
   background-color: #1a1a1a;
   color: #fff;
 }
 
-.close-modal {
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #000;
-}
-
 .dark-mode .close-modal {
   color: #fff;
-}
-
-.modal-movie-details h2 {
-  margin-top: 0;
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.modal-movie-details p {
-  line-height: 1.6;
-  margin-bottom: 12px;
-  font-size: 14px;
-}
-
-.modal-add-btn {
-  width: 100%;
-  padding: 12px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-  margin-top: 15px;
-  transition: background 0.2s;
-}
-
-.modal-add-btn:hover {
-  background: #0056b3;
 }
