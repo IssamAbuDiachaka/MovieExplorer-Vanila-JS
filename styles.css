@@ -83,6 +83,18 @@ header {
   color: #666;
 }
 
+/* CHARACTER COUNTER */
+.char-counter {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #666;
+  display: none;
+  transition: color 0.3s;
+}
+
 /* THEME TOGGLE BUTTON */
 #toggle-theme {
   background: transparent;
@@ -391,6 +403,7 @@ main {
 }
 
 /* DARK MODE THEME */
+
 .dark-mode {
   background-color: #0a0a0a;
   color: #fff;
@@ -419,19 +432,13 @@ main {
   color: #666;
 }
 
-.dark-mode #search-input:focus {
-  background: #1a1a1a;
-  border-color: #3a3a3a;
+.dark-mode .char-counter {
+  color: #888;
 }
 
 .dark-mode #toggle-theme {
   color: #fff;
   border-color: #2a2a2a;
-}
-
-.dark-mode #toggle-theme:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: #3a3a3a;
 }
 
 .dark-mode #movie-results-section {
@@ -473,16 +480,6 @@ main {
   color: #fff;
 }
 
-.dark-mode .movie-card button:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: #3a3a3a;
-}
-
-.dark-mode .movie-card:hover {
-  border-color: #3a3a3a;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-}
-
 .dark-mode #watchlist {
   background: #1a1a1a;
 }
@@ -505,19 +502,9 @@ main {
   color: #fff;
 }
 
-.dark-mode #watchlist-items button:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: #3a3a3a;
-}
-
 .dark-mode #clear-watchlist {
   border-color: #2a2a2a;
   color: #fff;
-}
-
-.dark-mode #clear-watchlist:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: #3a3a3a;
 }
 
 .dark-mode .modal-content {

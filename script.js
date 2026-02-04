@@ -8,12 +8,17 @@ let watchlist = [];
 document.addEventListener("DOMContentLoaded", initializeEventListeners);
 
 function initializeEventListeners() {
+  const searchInput = document.getElementById("search-input");
+
   // Search input - Enter key to search
-  document.getElementById("search-input").addEventListener("keypress", (e) => {
+  searchInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
       searchMovies();
     }
   });
+
+  // Search input - Live character counter
+  searchInput.addEventListener("input", updateCharCounter);
 
   // Watchlist clear button
   document
@@ -170,6 +175,19 @@ function clearWatchlist() {
 }
 
 // UI UTILITIES
+// Update character counter for search input
+function updateCharCounter() {
+  const searchInput = document.getElementById("search-input");
+  const charCounter = document.getElementById("char-counter");
+  const charCount = searchInput.value.length;
+
+  if (charCount > 0) {
+    charCounter.textContent = `Search term: ${charCount} char${charCount !== 1 ? "s" : ""}`;
+    charCounter.style.display = "block";
+  } else {
+    charCounter.style.display = "none";
+  }
+}
 
 // Toggle between light and dark theme
 function toggleTheme() {
