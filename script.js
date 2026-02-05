@@ -65,7 +65,7 @@ function searchMovies() {
       if (data.Response === "True") {
         displayMovies(data.Search);
       } else {
-        document.getElementById("movie-results").innerHTML = "No movies found.";
+        displayNoResults(query);
         heading.style.display = "none";
       }
     })
@@ -74,6 +74,23 @@ function searchMovies() {
         "Error fetching data.";
       heading.style.display = "none";
     });
+}
+
+// Display no results message with suggestions
+function displayNoResults(query) {
+  const resultsContainer = document.getElementById("movie-results");
+  resultsContainer.innerHTML = `
+    <div class="no-results">
+      <h3>No movies found for "${query}"</h3>
+      <p>Try these suggestions:</p>
+      <ul>
+        <li>Check your spelling</li>
+        <li>Try different keywords</li>
+        <li>Use more general terms (e.g., "Star" instead of "Star Wars Episode IV")</li>
+        <li>Search by actor name or director</li>
+      </ul>
+    </div>
+  `;
 }
 
 // Render movie cards to the DOM
