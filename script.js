@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", initializeEventListeners);
 function initializeEventListeners() {
   const searchInput = document.getElementById("search-input");
 
-  // Search input - Enter key to search
+  // Search input - Enter key to search for easy searchees
   searchInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
       searchMovies();
